@@ -10,4 +10,5 @@ int main() {
     //realización de suma
     suma= numero1 + numero2;
     printf("la suma de %d y de %d es %d\n", numero1, numero2, suma);
+    return 0;
 }
