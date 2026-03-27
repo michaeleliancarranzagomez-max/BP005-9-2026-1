@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
 
-   int monitor,matricula, carne, aprobo, codigo;
+   int monitor,matricula, carne, codigo, algo;
    float nota1, nota2, nota3, promedio;
    double valormat;
    char nombre [40];
@@ -13,17 +13,29 @@ int main(){
    printf("Digite su codigo de estudiante ");
    scanf("%d", &codigo);
 
+   printf("bienvenido %s\n",nombre);
+
    printf("estas matriculado\n");
    printf("0  no\n");
    printf("1  si\n");
    scanf("%d",&matricula);
+
+   printf("eres monitor\n");
+   printf("0  no\n");
+   printf("1  si\n");
+   scanf("%d",&monitor);
+
+   printf("muestras carne?\n");
+   printf("0  no\n");
+   printf("1  si\n");
+   scanf("%d",&carne);
 
    printf("escribe la inicial de tu apellido ");
    scanf(" %c", &inicial);
 
     //para relajar el codigo un espacio =)
 
-   printf("escribe tu primer nota ");
+   printf("escribe tu primer nota, acuerdate de el punto ");
    scanf("%f", &nota1);
   
    printf("nota 2 ");
@@ -42,12 +54,8 @@ int main(){
     }else{
      printf("no eres estudiante");
      }
-
-   if(codigo % 2 == 0){
-     printf("tu codigo es par\n");
-   }else{
-      printf("tu codigo es impar\n");
-    }
+   
+      if(codigo % 2 == 0){printf("tu codigo es par\n");}else{printf("tu codigo es impar\n");}
 
    // otro espacio de paz °__°
 
@@ -62,10 +70,50 @@ int main(){
       if (promedio< 3.0){
         printf("Resultado: Reprobado.\n");
       }else if 	(promedio< 4.0){
-         printf("resultado: aprobado con desempeño aceptable.\n");
+         printf("resultado: aprobado con desempeno aceptable.\n");
       }else if (promedio<4.5){
-         printf("resultado buen desempeño.\n");
-      }else{ printf("Resultado: Excelente desempeño.\n");
+         printf("resultado buen desempeno.\n");
+      }else{ printf("Resultado: Excelente desempeno.\n");
       }
    }
+   bool paso (promedio > 3.0);
+
+   if (matricula != 0 && matricula != 1 || monitor != 0 && monitor !=1 || carne != 0 && carne != 1){
+   printf("una o mas opciones se respondieron mal ");
+   }else{
+        if (matricula == 1){
+          printf("eres estudiante\n");
+          printf("analizando si aprovaste \n");
+          if (paso){
+            printf("pasaste puedes pasar \n");
+          }else{
+            printf("lo siento no pasaste no puedes pasar");}}
+        else if(matricula == 0 && monitor == 0){
+          printf("eres algo de la universidad?\n");
+          printf("0 no\n");
+          printf("1");
+          scanf("%d",&algo);
+          if(algo == 0){
+            printf("no deberias estar aca no puedes entrar");
+          }else{
+             printf("no es por dudar pero voy a mirar tus documentos");
+             printf("analizando carne");
+             if(carne == 0){
+               printf("no pudimos confirmar tu identidad lo siento no puedes entrar");
+             }else{
+               printf("puedes pasar");
+              }
+           }
+        }
+    }
+   
+   //resumen por fin
+
+   printf("resumen\n");
+   printf("tu nombre es: %s\n", nombre);
+   printf("la inicial de tu apellido es: %c \n", inicial);
+   printf("tu codigo es: %d\n", codigo);
+   printf("tu promedio es: %2f\n", promedio);
+   printf("pagas de matricula %lf\n",valormat);
+return 0;
 }
