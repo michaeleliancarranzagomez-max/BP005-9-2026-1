@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main () {
+   int i = 1; 
+
+   while (i<=5) {
+      printf("todavia no, vas en %d\n ",i);
+      i++;
+   }
+   printf("listo ya llegaste =) \n");
+return 0;
+}
