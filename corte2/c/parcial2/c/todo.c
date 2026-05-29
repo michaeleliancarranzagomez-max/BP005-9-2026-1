@@ -45,7 +45,7 @@ int main(){
         printf("\n========== MENU ==========\n");
         printf("1, mostrar x, &x, px Y *px\n");
         printf("2, duplicar x usando puntero  *px\n");
-        printf("intercambiar x, y, z usando pu teros");
+        printf("3 intercambiar x, y, z usando pu teros\n");
         printf("4, analizar x, y, z usando punteros\n");
         printf("0, salir\n");
         printf("seleccione una opcion: ");
@@ -64,13 +64,13 @@ int main(){
                 printf("despues %d\n", x);
                 break;
             case 3:
-                printf("antes x = %d, y = %d", x, y);
+                printf("antes x = %d, y = %d\n", x, y);
                 intercambiar(&x, &y);
-                printf("despues x = %d, y = %d", x, y);
+                printf("despues x = %d, y = %d\n", x, y);
                 break;
             case 4:
                 analizar(x, y, z, &suma, &mayor, &menor);
-                printf("suma: %d, mayor: %d, menor: %d", suma, mayor, menor);
+                printf("suma: %d, mayor: %d, menor: %d\n", suma, mayor, menor);
                 break;
             case 0:
                 printf("saliendo del programa...\n");
