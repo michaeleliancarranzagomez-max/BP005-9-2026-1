@@ -1,6 +1,6 @@
 #include <stdio.h>
 void duplicar(int *p){
-   if(*p != NULL){
+   if(p != NULL){
        *p = *p * 2;
    }
 }
