@@ -16,7 +16,7 @@ void analizar(int a, int b, int c, int *suma, int *mayor, int *menor){
     if (suma == NULL || mayor == NULL || menor == NULL){
         return;
     }
-    suma = a + b + c;
+    *suma = a + b + c;
     *mayor = a;
     if (b > *mayor){
         *mayor = b;
